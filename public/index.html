@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="TriagemLab: dinâmica educativa e simulada sobre inteligência artificial na saúde.">
+  <title>TriagemLab | IA na saúde</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="brand"><span class="logo">✚</span><span>Triagem<span class="accent">Lab</span></span></div>
+      <span class="tag">Atividade educativa e simulada</span>
+    </header>
+
+    <section id="inicio" class="panel" aria-labelledby="titulo">
+      <p class="eyebrow">RELATO DO PACIENTE</p>
+      <h2 id="titulo" tabindex="-1">Paciente, 60 anos</h2>
+      <p>"Tenho 60 anos e já faço acompanhamento médico por causa de um problema nos rins.</p>
+      <p>Nos últimos meses, tenho sentido bastante cansaço, inchaço nos pés e tornozelos e algumas alterações na frequência com que vou ao banheiro.</p>
+      <p>Também tenho dúvidas sobre minha alimentação. Não sei exatamente quais alimentos devo evitar e tenho receio de consumir algo que possa piorar minha condição.</p>
+      <p>Recentemente, procurei um urologista para receber orientações, mas gostaria de entender melhor o que pode estar acontecendo e como minha alimentação pode influenciar minha saúde."</p>
+
+      <form id="formulario">
+        <label for="resposta">Coloque os sintomas do paciente para analisar com IA</label>
+        <textarea id="resposta" rows="4" required></textarea>
+        <button id="analisar" class="button" type="submit">Gerar diagnóstico <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section id="carregando" class="panel loading hidden" aria-labelledby="carregando-titulo">
+      <div class="spinner" aria-hidden="true"></div>
+      <h2 id="carregando-titulo" tabindex="-1">Gerando diagnóstico…</h2>
+    </section>
+
+    <section id="resultado" class="panel hidden" aria-labelledby="resultado-titulo">
+      <p class="eyebrow">RESPOSTA DA IA</p>
+      <h1 id="resultado-titulo" tabindex="-1">Resposta do sistema</h1>
+      <div class="hipotese">
+        <p id="hipotese-titulo" class="hipotese-titulo"></p>
+        <p id="hipotese-texto" class="hipotese-texto"></p>
+      </div>
+      <p class="hint">Resposta simulada para fins educativos.</p>
+      <button id="voltar" class="button button-secundario" type="button"><span aria-hidden="true">←</span> Voltar ao relato</button>
+    </section>
+  </main>
+</body>
+</html>
